@@ -1,0 +1,10 @@
+.chart {
+  text-align: center;
+  height: 300px;
+}
+.energy-usage {
+  margin-top:100px;
+}
+canvas {
+  height:300px
+}

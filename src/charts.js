@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Bar, Line} from 'react-chartjs-2'
+import './charts.css'
 
 const Graph = ({billData}) => {
 
@@ -30,6 +31,7 @@ const Graph = ({billData}) => {
         }]
         }}
         options={{
+          responsive:true,
           scales: {
               yAxes: [{
                   ticks: {
@@ -45,9 +47,9 @@ const Graph = ({billData}) => {
     }
         />
         </div>
+
         <div className='energy-usage chart'>
         <h2>Energy Usage</h2>
-
         <Line
         data={{
           labels: getDates(),
@@ -69,9 +71,7 @@ const Graph = ({billData}) => {
               }]
           },
           maintainAspectRatio: false
-      }
-    }
-
+      }}
         />
         </div>
         </React.Fragment>

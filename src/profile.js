@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Graph from './charts.js'
 
 const Profile = ({billData}) => {
