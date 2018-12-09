@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Graph from './charts.js'
 
-class Homepage extends Component {
-  render() {
+const Homepage = ({billData}) => {
     return (
-      <p> the homepage!</p>
+      <React.Fragment>
+      <p>Homepage</p>
+      <Graph billData= {billData}/>
+      </React.Fragment>
     );
   }
-}
 
 export default Homepage;
