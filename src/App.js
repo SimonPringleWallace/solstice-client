@@ -22,8 +22,8 @@ class App extends Component {
     return (
       <React.Fragment>
       <Header/>
-      <Route exact path ='/' render={() => <Homepage billData={this.state.billData}/>}/>
-      <Route exact path ='/profile' component={Profile}/>
+      <Route exact path ='/' Component={Homepage}/>
+      <Route exact path ='/profile' render={() => <Profile billData={this.state.billData}/>}/>
       </React.Fragment>
     );
   }

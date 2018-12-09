@@ -1,11 +1,8 @@
 import React from 'react';
-import Graph from './charts.js'
-
-const Homepage = ({billData}) => {
+const Homepage = () => {
     return (
       <React.Fragment>
       <p>Homepage</p>
-      <Graph billData= {billData}/>
       </React.Fragment>
     );
   }

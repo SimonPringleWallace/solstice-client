@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import Graph from './charts.js'
 
-class Profile extends Component {
-  render() {
+const Profile = ({billData}) => {
     return (
-      <p> the profile!</p>
+      <React.Fragment>
+      <Graph billData= {billData}/>
+      </React.Fragment>
     );
   }
-}
 
 export default Profile;

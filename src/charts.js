@@ -2,57 +2,80 @@ import React, { Component } from 'react';
 import {Bar, Line} from 'react-chartjs-2'
 
 const Graph = ({billData}) => {
-  // get an array for each of the years
 
   const getDates = () => {
     return billData.map(bill => bill.month + '/' + bill.year).reverse()
   }
-  const billArray = billData.map(bill => bill.bill).reverse()
-  const savingsArray = billData.map(bill => bill.savings).reverse()
 
-    return (
-      <React.Fragment>
-      <div className='bill-info'>
-      <h2> Bill Information</h2>
-      <Bar
-      data={{
-        labels: getDates(),
-        datasets: [{
-        label: 'Total Bill',
-         data: billArray,
-         backgroundColor: 'rgb(255,99,71,.5)'
-      },
-      {
-        label: 'Total Savings',
-         data: savingsArray,
-         backgroundColor: 'rgba(152,251,152,.5)'
-      }]
-      }}
-      width={5}
-      height={100}
-      options={{
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true,
-                    callback:function(value){
-                      return '$' + value;
-                    }
-                }
-            }]
-        },
-        maintainAspectRatio: false
-    }
+  const findBillDetails = (desiredKey) => {
+    return billData.map(bill => bill[desiredKey]).reverse()
+
   }
-      />
-      </div>
-      <div className='energy-usage'>
-      <Line
+     return (
+        <React.Fragment>
+        <div className='bill-info chart'>
+        <h2> Bill Information</h2>
+        <Bar
+        data={{
+          labels: getDates(),
+          datasets: [{
+          label: 'Total Bill',
+           data: findBillDetails('bill'),
+           backgroundColor: 'rgb(255,99,71,.4)'
+        },
+        {
+          label: 'Total Savings',
+           data: findBillDetails('savings'),
+           backgroundColor: 'rgba(152,251,152,.4)'
+        }]
+        }}
+        options={{
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero:true,
+                      callback:function(value){
+                        return '$' + value;
+                      }
+                  }
+              }]
+          },
+          maintainAspectRatio: false
+      }
+    }
+        />
+        </div>
+        <div className='energy-usage chart'>
+        <h2>Energy Usage</h2>
 
-      />
-      </div>
-      </React.Fragment>
-    );
+        <Line
+        data={{
+          labels: getDates(),
+          datasets: [{
+          label: 'Energy Usage',
+           data: findBillDetails('kwh'),
+           backgroundColor: 'rgb(30,144,255,.1)'
+        }]
+        }}
+        options={{
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero:true,
+                      callback:function(value){
+                        return value + 'kwh';
+                      }
+                  }
+              }]
+          },
+          maintainAspectRatio: false
+      }
+    }
+
+        />
+        </div>
+        </React.Fragment>
+      );
   }
 
 export default Graph;
