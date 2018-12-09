@@ -10,7 +10,7 @@ class Header extends Component {
         <div className='nav-links'>
         <NavLink
           exact to='/'
-          style={{ color: "white", margin:30}}
+          style={{ color: "white", margin:20}}
           activeStyle={{fontweight:"bold",
                         color:"orange"
                       }}>
@@ -19,7 +19,7 @@ class Header extends Component {
 
         <NavLink
           exact to='/profile'
-          style={{ color: "white", margin:30}}
+          style={{ color: "white", margin:20}}
           activeStyle={{fontweight:"bold",
                         color:"orange",
                       }}>

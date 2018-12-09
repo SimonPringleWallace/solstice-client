@@ -1,0 +1,48 @@
+.hero{
+  text-align: center;
+  margin: 0 auto;
+  background-image: url(./images/solar-field.jpg);
+  background-size:cover;
+  background-position:center;
+  height:500px;
+  width: 100%;
+}
+h1 {
+  margin: 0;
+  padding-top: 80px;
+  font-size: 60px;
+  color: rgb(51,51,51);
+}
+h2 {
+  margin-left:50px;
+}
+h4{
+  margin:0;
+}
+.content-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 50px;
+}
+.content-flex img{
+  height: 200px;
+  width: 50%;
+  margin: -40px 0 0 20px;
+}
+.homepage-content{
+  margin-bottom:50px;
+}
+
+@media(max-width: 800px){
+  h1{
+    padding-top: 40px;
+  }
+  .content-flex{
+    flex-direction:column;
+  }
+  .content-flex img {
+    margin: 0 auto;
+    width: 100%
+  }
+}
