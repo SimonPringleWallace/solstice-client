@@ -1,5 +1,5 @@
 import React from 'react';
-import Graph from './charts.js'
+import Graph from './charts/charts.js'
 
 const Profile = ({billData}) => {
     return (

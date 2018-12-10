@@ -1,17 +1,9 @@
 import React from 'react';
-import {Bar, Line} from 'react-chartjs-2'
+import {Bar} from 'react-chartjs-2'
 import './charts.css'
 
-const Graph = ({billData}) => {
+const BillInfo = ({getDates, findBillDetails}) => {
 
-  const getDates = () => {
-    return billData.map(bill => bill.month + '/' + bill.year).reverse()
-  }
-
-  const findBillDetails = (desiredKey) => {
-    return billData.map(bill => bill[desiredKey]).reverse()
-
-  }
      return (
         <React.Fragment>
         <div className='bill-info chart'>
@@ -47,35 +39,8 @@ const Graph = ({billData}) => {
     }
         />
         </div>
-
-        <div className='energy-usage chart'>
-        <h2>Energy Usage</h2>
-        <Line
-        data={{
-          labels: getDates(),
-          datasets: [{
-          label: 'Energy Usage',
-           data: findBillDetails('kwh'),
-           backgroundColor: 'rgb(30,144,255,.1)'
-        }]
-        }}
-        options={{
-          scales: {
-              yAxes: [{
-                  ticks: {
-                      beginAtZero:true,
-                      callback:function(value){
-                        return value + 'kwh';
-                      }
-                  }
-              }]
-          },
-          maintainAspectRatio: false
-      }}
-        />
-        </div>
         </React.Fragment>
       );
   }
 
-export default Graph;
+export default BillInfo;

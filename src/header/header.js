@@ -13,9 +13,9 @@ class Header extends Component {
           style={{ color: "white", margin:20}}
           activeStyle={{fontweight:"bold",
                         color:"orange"
-                      }}>
+          }}>
           Home
-        </NavLink>
+          </NavLink>
 
         <NavLink
           exact to='/profile'
