@@ -1,5 +1,6 @@
 {
   "name": "solstice-challenge-client",
+  "homepage" : "https://SimonPringleWallace.github.io/solstice-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
