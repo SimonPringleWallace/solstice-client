@@ -1,0 +1,15 @@
+{
+  "main.css": "/solstice-client/static/css/main.aad0a182.chunk.css",
+  "main.js": "/solstice-client/static/js/main.c06d501d.chunk.js",
+  "main.js.map": "/solstice-client/static/js/main.c06d501d.chunk.js.map",
+  "static/js/1.65819da5.chunk.js": "/solstice-client/static/js/1.65819da5.chunk.js",
+  "static/js/1.65819da5.chunk.js.map": "/solstice-client/static/js/1.65819da5.chunk.js.map",
+  "runtime~main.js": "/solstice-client/static/js/runtime~main.b091980a.js",
+  "runtime~main.js.map": "/solstice-client/static/js/runtime~main.b091980a.js.map",
+  "static/css/main.aad0a182.chunk.css.map": "/solstice-client/static/css/main.aad0a182.chunk.css.map",
+  "static/media/homepage.css": "/solstice-client/static/media/solar-field.3414f5fb.jpg",
+  "static/media/commsolar.gif": "/solstice-client/static/media/commsolar.bf1fc460.gif",
+  "index.html": "/solstice-client/index.html",
+  "precache-manifest.f8f91172c19146d84e0bf9083011c5ce.js": "/solstice-client/precache-manifest.f8f91172c19146d84e0bf9083011c5ce.js",
+  "service-worker.js": "/solstice-client/service-worker.js"
+}
