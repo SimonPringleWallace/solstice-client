@@ -14,6 +14,8 @@ class App extends Component {
     }
     this.getBillData = getBillData.bind(this)
   }
+  // on mounting, send api request for information about user's billing history
+  // this data is later passed as a prop down to Profile component
   componentDidMount = () => {
     this.getBillData()
   }

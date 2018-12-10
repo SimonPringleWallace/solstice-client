@@ -1,10 +1,10 @@
 import React from 'react';
-import Graph from './charts/charts.js'
+import Graphs from './charts/charts.js'
 
 const Profile = ({billData}) => {
     return (
       <React.Fragment>
-      <Graph billData= {billData}/>
+      <Graphs billData= {billData}/>
       </React.Fragment>
     );
   }
